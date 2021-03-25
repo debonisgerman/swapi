@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: starWars;
+  src: url(./assets/fonts/Starjedi.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: url("./assets/img/bg.jpeg");
+  margin: 0;
+  color: #fcc200;
+
+  font-family: starWars;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+/***** TABLE ******/
+#table {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+.table-head th,
+.table-body td {
+  border: 1px solid #fcc200;
+  padding: 5px;
+  font-size: 15px;
+  display: table-cell;
+  width: 100px;
+}
+
+.table-head th {
+  background-color: #fcc200;
+  color: #000;
+  border-color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.table-head th:hover {
+  opacity: 1;
+}
+
+.table-head .selected {
+  opacity: 1;
+  font-weight: 800;
+}
+
+/*********** TABLET ****************/
+@media only screen and (max-width: 1024px) {
+  .desktop {
+    display: none!important;
+  }
+  #table {
+    width: 100%;
+  }
+}
+
+/*********** MOBILE *********/
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none!important;;
+  }
+
+  .tablet {
+    display: none;
+  }
 }
